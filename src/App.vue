@@ -1,19 +1,70 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Students v-bind:students1="students" />
   </div>
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Students from "./components/Students.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Students,
+  },
+  data() {
+    return {
+      students: [
+        {
+          studentId: "624235034",
+          FistName: "Wirakarn",
+          LastName: "Somchan",
+          weight: 45,
+          height: 155,
+          picture:
+            "https://raw.githubusercontent.com/624235044IT/picture/main/1.jpg",
+        },
+        {
+          studentId: "624235044",
+          FistName: "Niracha",
+          LastName: "Wanchitnai",
+          weight: 43,
+          height: 165,
+          picture:
+            "https://raw.githubusercontent.com/624235044IT/picture/main/5.jpg",
+        },
+        {
+          studentId: "624235051",
+          FistName: "Yada",
+          LastName: "banlatah",
+          weight: 62,
+          height: 165,
+          picture:
+            "https://raw.githubusercontent.com/624235044IT/picture/main/2.jpg",
+        },
+        {
+          studentId: "624235036",
+          FistName: "Kuasawan",
+          LastName: "Kuji",
+          weight: 65,
+          height: 175,
+          picture:
+            "https://raw.githubusercontent.com/624235044IT/picture/main/4.jpg",
+        },
+        {
+          studentId: "624235048",
+          FistName: "Warinton",
+          LastName: "Khogjan",
+          weight: 65,
+          height: 175,
+          picture:
+           "https://raw.githubusercontent.com/624235044IT/picture/main/3.jpg",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
